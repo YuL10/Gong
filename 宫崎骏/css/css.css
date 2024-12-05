@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    /*网页背景色*/
+    background: #d2f8fd;
+}
+ol,ul,li{
+    /*列表标签清除样式*/
+    list-style-type: none;
+}
+a{
+    /*a连接设置样式*/
+    font-size: 1.1em;
+    font-weight: bold;
+    color: rgb(53, 144, 172);
+    text-decoration: none;
+    transition: transform 2s ease;
+}
+nav{
+    /*width: 1300px;*/
+    /*设置导航栏的高度*/
+    height: 50px;
+    /*居中*/
+    margin: 0 auto;
+    /*设置弹性盒*/
+    display: flex;
+    /*调整弹性盒主轴对齐方向——space-around距离环绕、space-between两端对其、flex-start默认样式、center居中*/
+    /*这里实现的是img 和ul之间的等间距分隔（距离环绕）*/
+    justify-content: space-around;
+    /*设置导航栏背景色*/
+    background: white;
+}
+nav>ul>li>a:hover{
+    color: #024855;
+}
+nav>img{
+    /*导航栏图片设置宽高*/
+    height: 50px;
+    width: 225px;
+}
+nav>ul{
+    /*设置导航栏列表宽高*/
+    width: 800px;
+    height: 50px;
+    /*设置字体行高——实现字体的垂直居中*/
+    line-height: 50px;
+    /*给列表设置弹盒*/
+    display: flex;
+    /*侧轴居中——实现li的垂直居中、但是下面设置了li的高度为50px，所以这里是否设置效果都不会改变*/
+    align-items: center;
+    /*调整弹性盒主轴对齐方向——space-around距离环绕、space-between两端对其、flex-start默认样式、center居中*/
+    /*这里实现的是ul列表中的li的等间距分隔（距离环绕）*/
+    justify-content: space-around;
+}
+nav>ul>li{
+    /*设置li高度——上面提到此处为达到的效果和上面有所重复，可选择省略*/
+    height: 50px;
+    /*因为存在二级菜单跃出ul的界限 不设置会使二级菜单鼠标上去后 鼠标作用范围跑到轮播图部分 故提升层级*/
+    z-index: 1  ;
+}
+nav>ul>li:nth-child(3){
+    /*给ul中的第三个li设置样式——因为之前统一设置了a连接的样式，
+    而此处为二级菜单没有用到a连接所以单独设置样式*/
+
+    /*li中字体的水平居中*/
+    text-align: center;
+    /*设置字体大小*/
+    font-size: 1.1em;
+    /*设置字体粗细*/
+    font-weight: bold;
+    /*字体颜色*/
+    color: rgb(53, 144, 172);
+    /*因为这里不是a连接所以默认样式不是鼠标小手而设置鼠标小手*/
+    cursor: pointer;
+}
+nav>ul>li:nth-child(3):hover{
+    color: #024855;
+}
+nav>ul>li:nth-child(3)>.hidden{
+    /*设置二级菜单的基本样式*/
+    /*将初始的高度设置为0，以达到隐藏的目的，在鼠标经过之后在重新设置高度*/
+    height: 0;
+    /*设置溢出隐藏*/
+    overflow: hidden;
+    /*设置动画——过渡属性*/
+    transition: all .5s linear;
+    /*设置二级菜单的背景色,rgba的第四位为透明度百分比*/
+    background: rgba(255,255,255,0.3);
+    /*test*/
+    /*position: absolute;*/
+}
+nav>ul>li:nth-child(3)>.hidden>li{
+    /*设置ul（hidden）列表中li的高度*/
+    height: 45px;
+}
+nav>ul>li:nth-child(3):hover>.hidden{
+    /*设置ul（hidden）列表的高度——（45*6）*/
+    height: 270px;
+}
+nav>ul>li:nth-child(3)>ul>li:hover{
+    /*设置ul(hidden)中li在鼠标经过之后的背景色*/
+    background: rgba(0,0,0,0.75);
+}
+
+/*footer*/
+footer{
+    height: 150px;
+    width: 100%;
+    background: white;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+footer>img{
+    width: 300px;
+    height: 50px;
+}
+footer>p{
+    width: 300px;
+    color: rgb(53, 144, 172);
+    text-align: center;
+}
+footer>div{
+    width: 300px;
+    color: rgb(53, 144, 172);
+    text-align: center;
+}

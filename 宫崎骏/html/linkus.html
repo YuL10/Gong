@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>联系我们</title>
+    <link rel="stylesheet" href="../css/css.css">
+    <link rel="stylesheet" href="../css/css04.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/js03.js" defer></script>
+</head>
+<body>
+<!--导航栏-->
+<nav>
+    <img src="../images/img001.png" alt="">
+    <ul>
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="简介.html">宫崎骏简介</a></li>
+        <li>
+            作品推荐
+            <ul class="hidden">
+                <li><a href="lm.html">龙猫</a></li>
+                <li><a href="qfl.html">起风了</a></li>
+                <li><a href="qyqx.html">千与千寻</a></li>
+                <li><a href="mn.html">魔女宅急便</a></li>
+                <li><a href="xy.html">悬崖上的金鱼姬</a></li>
+                <li><a href="her.html">哈尔的移动城堡</a></li>
+            </ul>
+        </li>
+        <li><a href="renwufenxi.html">动漫人物分析</a></li>
+        <li><a href="linkus.html">联系我们</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>联系我们</h2>
+    <form id="contact-form">
+        <div>
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">邮箱:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="message">留言:</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">提交</button>
+    </form>
+    <div id="response"></div>
+</main>
+
+<footer>
+    <img src="../images/img001.png" alt="">
+    <p>Copyright&copy;XXX</p>
+    <div>
+        <p>如有侵权，请联系删除</p>
+        <p>Tel:188 8888 8888</p>
+    </div>
+</footer>
+</body>
+</html>
